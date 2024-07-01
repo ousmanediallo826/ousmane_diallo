@@ -15,16 +15,16 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I am <span className='text-[#915eff]'>Ousmane</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I am Junior at <br className='sm:block hidden' />
-            <span className='mb-3 text-[#915eff]'>CUNY New York City College of Technology.</span>
+            <span className='mb-3 text-[#915eff]'>CUNY New York City College of Technology. </span>
             I am majoring in <span className='text-[#915eff]'>Computer Systems | Software Engineering.</span>
           </p>
         </div>
       </div>
       <div className="relative w-full h-full " >
         <ComputersCanvas />
-        <div  className='absolute xs:bottom-10 bottom-34 w-full flex justify-center items-center'>
+        <div  className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
-        <div className='w-[35px] h-[64px] rounded-3x1 border-4 border-secondary flex justify-center items-start p-2 mt-2'>
+        <div className='w-[35px] h-[64px] rounded-3x1 border-4 rounded-b-full border-secondary flex justify-center items-start p-2 '>
         <motion.dev 
         animate={{
           y:[0, 24, 0]
