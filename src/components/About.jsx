@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
-import { sectionWrapper } from '../hoc';
+import { SectionWrapper } from '../hoc';  // Make sure to import SectionWrapper
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -33,18 +33,18 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div className='text-center '>
+      <motion.div className='text-center'>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
       <motion.p 
         variants={fadeIn("", "", 0.1, 1)} 
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-center mx-auto '
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-center mx-auto'
       >
         I am an undergraduate student at CUNY New York City College of Technology, majoring in Computer Systems with a concentration 
         in Software Engineering. As an incoming junior, I am passionate about coding and dedicated to solving complex problems through innovative software solutions.
       </motion.p>
-      <div className='mt-20 flex flex-wrap gap-10 justify-center '>
+      <div className='mt-20 flex flex-wrap gap-10 justify-center'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
@@ -53,4 +53,5 @@ const About = () => {
   );
 };
 
-export default sectionWrapper(About, "about");
+export default SectionWrapper(About, "about");
+
